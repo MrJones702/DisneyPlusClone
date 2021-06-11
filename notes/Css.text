@@ -1,0 +1,27 @@
+flex: 1; 
+    tells css that this area is the most important so it spreads it out and gives it majority of the room. ex) a navmenu in between a logo and a profile pic would get majority of the space instead of all 3 being bunched up to only 70% of the width available. Make sure to pair with margin-left 25px for example... just to give some better spacing... 
+border-radius: 50%;
+    turns a square picture into a circle... technically if takes away 50% of the picture in a curvature kind of way... 
+span{
+            font-size: 13px;
+            letter-spacing: 1.42px;
+            position: relative;!!!!!!!!!!
+
+            &:after {
+                content: "";
+                height: 2px;
+                background: white;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -6px;
+                opacity: 0;
+            }
+                8) position: relative is the parent object for the 
+                &:after {
+
+                } &:after is almost like a div that you can attach to another section/ tag in this case its attached to the span so anywhere that there's a span there will also be an accompanying after div ... to illustate just put something in the content so you can see the space being used up. 
+                14) position: absolute now gives it a position based off the parent company and to specify where we gave it left 0 spacing right 0 spacing and bottom -6px to make it go down just 6 px.... 
+
+transform: scaleX(0);
+    shortens the width to whatever u put in the parenthesis... .5 would be half the size 1 would be full and 0 is none at all... 
