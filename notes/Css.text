@@ -70,3 +70,11 @@ overflow: visible;
     * {
 
     } and it means the width contains the border as well...  
+
+display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid is flex on steroids... grid-template-columns: repeat===>5 = how many columns and the minmax is the with so 0 to 1fr.
+        1fr is basically stretch it out as much as possible... 
+
+!!!! 250ms is the golden number to use with transitions !!!!!!
+
