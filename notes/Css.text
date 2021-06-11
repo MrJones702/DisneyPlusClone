@@ -6,7 +6,7 @@ span{
             font-size: 13px;
             letter-spacing: 1.42px;
             position: relative;!!!!!!!!!!
-
+            !!! Can also use &:before for other purposes (background image maybe)
             &:after {
                 content: "";
                 height: 2px;
@@ -25,3 +25,48 @@ span{
 
 transform: scaleX(0);
     shortens the width to whatever u put in the parenthesis... .5 would be half the size 1 would be full and 0 is none at all... 
+
+transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    Copy and paste this... then look up documentation on cubic-bezier 
+
+styled.main 
+    is the same as styled.div but when dealing with the home component google likes to see whats under the hood as main... 
+    very HTML5 friendly...
+
+min-height: calc(100vh - 70px); 
+    calc will actually calculate the height of 100% of the vh (view height) and do the math of whatever operator you give it; in this case -70px which is what we set our header to.
+
+padding: 0 calc(3.5vw + 5px);
+    to and bottom = 0px 
+    left/right = calc(3.5vw + 5px);
+
+z-index: -1;
+    you need this when layering... put this on the back layer which allows for the div or w/e to sit behind another layer but still fully visible... 
+
+let settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true
+    }
+    return (
+        <Carousel {...settings}>
+            Image Slider
+        </Carousel>
+    )
+
+        ok so settings are all pretty self explanatory but check out Imgslider.js for more visual representation of why and where its need. 
+        this note is for line 55) {...settings}
+            allows the tag its in (in this case Carousel) to inherit the settings set above .. almost like passing em as a parameter but in this case it would be destructuring... 
+
+overflow: visible;
+    allows you to see the edges of the previous/ next slider... instead of arrows... 
+    by default this is not visible... 
+
+ box-sizing: border-box;
+    this was put inside app.css in an everything bracket... aka 
+    * {
+
+    } and it means the width contains the border as well...  
